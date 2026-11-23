@@ -12,10 +12,7 @@
     - Browser local storage
 */
 
-// ========================================
 // DASHBOARD: DATE AND TIME
-// ========================================
-
 function updateDateTime() {
     const dateElement = document.getElementById("currentDateTime");
 
@@ -39,11 +36,7 @@ if (document.getElementById("currentDateTime")) {
     setInterval(updateDateTime, 60000);
 }
 
-
-// ========================================
 // DASHBOARD: MOTIVATIONAL QUOTES API
-// ========================================
-
 async function fetchMotivationalQuote() {
     const quoteElement = document.getElementById("motivationalQuote");
     const authorElement = document.getElementById("quoteAuthor");
@@ -91,11 +84,7 @@ if (document.getElementById("motivationalQuote")) {
     }
 }
 
-
-// ========================================
 // DASHBOARD: WEATHER API
-// ========================================
-
 async function fetchWeather() {
     const temperature = document.getElementById("weatherTemperature");
     const conditions = document.getElementById("weatherConditions");
@@ -146,11 +135,7 @@ async function fetchWeather() {
 
 fetchWeather();
 
-
-// ========================================
 // WORKOUT TRACKER: LOCAL STORAGE
-// ========================================
-
 const WORKOUT_STORAGE_KEY = "campusAthleteWorkouts";
 
 function getSavedWorkouts() {
@@ -182,11 +167,7 @@ function saveWorkouts(workouts) {
     }
 }
 
-
-// ========================================
 // WORKOUT TRACKER: FORM FIELDS
-// ========================================
-
 function updateWorkoutFields() {
     const typeElement = document.getElementById("workoutType");
 
@@ -257,11 +238,7 @@ if (workoutTypeSelect) {
     updateWorkoutFields();
 }
 
-
-// ========================================
 // WORKOUT TRACKER: SAVE WORKOUTS
-// ========================================
-
 const workoutForm = document.getElementById("workoutForm");
 
 if (workoutForm) {
@@ -311,11 +288,7 @@ if (workoutForm) {
     });
 }
 
-
-// ========================================
 // WORKOUT TRACKER: DISPLAY HISTORY
-// ========================================
-
 function displayWorkoutHistory() {
     const historyElement = document.getElementById("workoutHistory");
 
@@ -348,11 +321,7 @@ function displayWorkoutHistory() {
     });
 }
 
-
-// ========================================
 // DASHBOARD: RECENT WORKOUT
-// ========================================
-
 function updateDashboardWorkoutSummary() {
     const recentElement = document.getElementById("recentWorkout");
 
@@ -371,10 +340,6 @@ function updateDashboardWorkoutSummary() {
     }
 }
 
-
-// ========================================
 // INITIALIZE WORKOUT FEATURES
-// ========================================
-
 displayWorkoutHistory();
 updateDashboardWorkoutSummary();
