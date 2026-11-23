@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find meals, save recipes, and track daily hydration.">
+    <meta name="description" content="Nutrition and hydration resources for student-athletes.">
     <title>Nutrition & Hydration | Campus Athlete Success Hub</title>
 
     <!-- Bootstrap and custom styling -->
@@ -38,10 +38,11 @@
                             <a class="nav-link" href="workouts.html">Workouts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="nutrition.html">Nutrition</a>
+                            <a class="nav-link active" aria-current="page"
+                               href="nutrition.html">Nutrition</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resources.html">Resources</a>
+                            <a class="nav-link" href="recovery.html">Resources</a>
                         </li>
                     </ul>
                 </div>
@@ -54,129 +55,120 @@
         <!-- Page introduction -->
         <section class="mb-4">
             <h1>Nutrition &amp; Hydration</h1>
-            <p>Discover meals, save recipes, and track your daily water intake.</p>
+            <p>
+                Explore basic nutrition and hydration information
+                to support an active lifestyle.
+            </p>
         </section>
 
-        <!-- Meal search section -->
+        <div class="row g-4 mb-4">
+
+            <!-- Nutrition information -->
+            <section class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h4">Nutrition Basics</h2>
+
+                        <p>
+                            Eating balanced meals can help student-athletes
+                            maintain energy throughout the day.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Carbohydrates provide energy for
+                                workouts and daily activities.
+                            </li>
+                            <li>
+                                Protein supports muscle recovery
+                                and maintenance.
+                            </li>
+                            <li>
+                                Fruits and vegetables provide
+                                important vitamins and minerals.
+                            </li>
+                            <li>
+                                Healthy fats are part of a
+                                balanced diet.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hydration information -->
+            <section class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h4">Hydration Basics</h2>
+
+                        <p>
+                            Staying hydrated is important for
+                            physical activity and everyday health.
+                        </p>
+
+                        <ul>
+                            <li>Drink water regularly throughout the day.</li>
+                            <li>
+                                Bring a water bottle to classes
+                                and workouts.
+                            </li>
+                            <li>
+                                Pay attention to thirst and
+                                activity level.
+                            </li>
+                            <li>
+                                Fluid needs can increase during
+                                exercise and hot weather.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Planned nutrition features -->
         <section class="card mb-4">
             <div class="card-body">
-                <h2 class="h4">Meal Search</h2>
-                <p class="text-muted">
-                    Search for meal ideas using TheMealDB API.
+                <h2 class="h4">Coming in the Final Version</h2>
+
+                <p>
+                    The final version of Campus Athlete Success Hub
+                    will include additional tools to help athletes
+                    manage nutrition and hydration.
                 </p>
 
-                <form id="mealSearchForm" class="row g-3">
-                    <div class="col-md-8">
-                        <label for="mealSearchInput" class="form-label">
-                            Search Meal or Ingredient
-                        </label>
-                        <input type="search" class="form-control"
-                               id="mealSearchInput"
-                               placeholder="e.g., chicken, pasta, salmon" required>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="mealCategory" class="form-label">
-                            Meal Category
-                        </label>
-                        <select id="mealCategory" class="form-select">
-                            <option value="">All Categories</option>
-                            <option value="Beef">Beef</option>
-                            <option value="Chicken">Chicken</option>
-                            <option value="Pasta">Pasta</option>
-                            <option value="Seafood">Seafood</option>
-                            <option value="Vegetarian">Vegetarian</option>
-                            <option value="Vegan">Vegan</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">
-                            Search Meals
-                        </button>
-                    </div>
-                </form>
-
-                <p id="mealSearchMessage" class="mt-3" role="status" aria-live="polite"></p>
-
-                <!-- API results will appear here -->
-                <div id="mealSearchResults" class="row g-3 mt-2">
-                    <p class="text-muted">
-                        Search results will appear here.
-                    </p>
-                </div>
+                <ul>
+                    <li>Meal searches using TheMealDB API</li>
+                    <li>Recipe details and ingredients</li>
+                    <li>Favorite meal saving</li>
+                    <li>Daily water intake tracking</li>
+                    <li>Hydration goals and progress tracking</li>
+                </ul>
             </div>
         </section>
 
-        <div class="row g-4">
-
-            <!-- Meal details and favorites -->
-            <section class="col-lg-7">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="h4">Meal Details &amp; Favorites</h2>
-
-                        <div id="mealDetails" class="mb-4">
-                            <p>Select a meal to view its ingredients and recipe.</p>
-                        </div>
-
-                        <h3 class="h5">Saved Favorite Meals</h3>
-                        <div id="favoriteMeals">
-                            <p>No favorite meals saved yet.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Daily water tracker -->
-            <section class="col-lg-5">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="h4">Daily Water Tracker</h2>
-
-                        <label for="waterGoal" class="form-label">
-                            Daily Water Goal (oz)
-                        </label>
-                        <input type="number" class="form-control mb-3"
-                               id="waterGoal" value="64" min="1">
-
-                        <p id="waterIntake">Current Water Intake: 0 oz</p>
-
-                        <div class="progress mb-3" role="progressbar"
-                             aria-label="Daily hydration progress"
-                             aria-valuenow="0" aria-valuemin="0"
-                             aria-valuemax="100">
-                            <div id="hydrationProgress"
-                                 class="progress-bar"
-                                 style="width: 0%;">0%</div>
-                        </div>
-
-                        <button id="addWaterButton" type="button"
-                                class="btn btn-primary">
-                            Add 8 oz Water
-                        </button>
-
-                        <p id="waterMessage" class="mt-3"
-                           role="status" aria-live="polite"></p>
-                    </div>
-                </div>
-            </section>
-        </div>
     </main>
 
     <!-- Footer navigation -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <div class="container">
-            <a href="resources.html#about" class="text-white">About</a>
+            <a href="recovery.html" class="text-white">About</a>
             <span class="mx-2">|</span>
-            <a href="resources.html#accessibility" class="text-white">Accessibility</a>
+            <a href="recovery.html#accessibility" class="text-white">
+                Accessibility
+            </a>
             <span class="mx-2">|</span>
-            <a href="resources.html#contact" class="text-white">Contact</a>
+            <a href="recovery.html#contact" class="text-white">
+                Contact
+            </a>
         </div>
     </footer>
 
     <!-- Bootstrap and custom JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>

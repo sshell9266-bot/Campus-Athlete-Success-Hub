@@ -34,7 +34,8 @@
                 <div class="collapse navbar-collapse" id="mainNavigation">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page"
+                               href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="workouts.html">Workouts</a>
@@ -43,7 +44,7 @@
                             <a class="nav-link" href="nutrition.html">Nutrition</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resources.html">Resources</a>
+                            <a class="nav-link" href="recovery.html">Recovery</a>
                         </li>
                     </ul>
                 </div>
@@ -64,45 +65,64 @@
 
         <!-- Weather and daily motivation -->
         <div class="row g-4 mb-4">
+
+            <!-- Weather information from API -->
             <section class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="h4">Weather</h2>
-                        <p id="weatherTemperature">Temperature: Coming soon</p>
-                        <p id="weatherConditions">Conditions: Coming soon</p>
-                        <p id="weatherLocation">Location: Not selected</p>
+                        <p id="weatherTemperature">
+                            Temperature: Loading...
+                        </p>
+                        <p id="weatherConditions">
+                            Conditions: Loading...
+                        </p>
+                        <p id="weatherLocation">
+                            Location: Newberry, SC
+                        </p>
                     </div>
                 </div>
             </section>
 
+            <!-- Motivational quote from API -->
             <section class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="h4">Daily Motivation</h2>
+
                         <blockquote class="blockquote">
                             <p id="motivationalQuote">
-                                Your next motivational quote is on its way!
+                                Loading motivational quote...
                             </p>
                             <footer id="quoteAuthor" class="blockquote-footer">
                                 Campus Athlete Success Hub
                             </footer>
                         </blockquote>
-                        <button id="refreshQuote" class="btn btn-primary" type="button">
+
+                        <button id="refreshQuote"
+                                class="btn btn-primary"
+                                type="button">
                             Refresh Quote
                         </button>
                     </div>
                 </div>
             </section>
+
         </div>
 
         <!-- Workout summary and quick access -->
         <div class="row g-4">
+
+            <!-- Recent workout -->
             <section class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="h4">Workout Summary</h2>
-                        <p id="recentWorkout">Recent Workout: No workouts logged yet.</p>
-                        <p id="workoutStreak">Workout Streak: 0 days</p>
+
+                        <p id="recentWorkout">
+                            Recent Workout: No workouts logged yet.
+                        </p>
+
                         <a href="workouts.html" class="btn btn-primary">
                             View Workouts
                         </a>
@@ -110,40 +130,53 @@
                 </div>
             </section>
 
+            <!-- Quick navigation -->
             <section class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="h4">Quick Access</h2>
+
                         <div class="d-grid gap-2">
-                            <a href="workouts.html" class="btn btn-outline-primary">
+                            <a href="workouts.html"
+                               class="btn btn-outline-primary">
                                 Workout Tracker
                             </a>
-                            <a href="nutrition.html" class="btn btn-outline-primary">
+
+                            <a href="nutrition.html"
+                               class="btn btn-outline-primary">
                                 Nutrition &amp; Hydration
                             </a>
-                            <a href="resources.html" class="btn btn-outline-primary">
+
+                            <a href="recovery.html"
+                               class="btn btn-outline-primary">
                                 Recovery &amp; Resources
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
+
         </div>
     </main>
 
     <!-- Website footer -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <div class="container">
-            <a href="resources.html#about" class="text-white">About</a>
+            <a href="recovery.html#about" class="text-white">About</a>
             <span class="mx-2">|</span>
-            <a href="resources.html#accessibility" class="text-white">Accessibility</a>
+            <a href="recovery.html#accessibility" class="text-white">
+                Accessibility
+            </a>
             <span class="mx-2">|</span>
-            <a href="resources.html#contact" class="text-white">Contact</a>
+            <a href="recovery.html#contact" class="text-white">
+                Contact
+            </a>
         </div>
     </footer>
 
-    <!-- JavaScript dependencies -->
+    <!-- Bootstrap and custom JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
